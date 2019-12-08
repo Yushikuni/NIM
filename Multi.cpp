@@ -2,7 +2,6 @@
 #define playerA 1
 #define playerB 2
 
-
 bool winnerIs(int whoseTurns)
 {
 	if (whoseTurns == playerB )
@@ -29,7 +28,7 @@ int playersTurn(int nTok, int take, char namePlayer)
 int multiPlayer()
 {
 	printf_s("Who take a last token win a game\n\n");
-	int ppt = 0, ait = 0; //player turns
+	int ppt = 0, ppt2 = 0; //player turns
 	int plr2Win = 0, plr1Win = 0;
 	int token = 0;
 	printf_s("number of tokens: ");
@@ -53,6 +52,7 @@ int multiPlayer()
 				scanf_s("%d", &pTT);
 				nextTok = playerTurn(token, pTT);
 				token = nextTok;
+				++ppt;
 				break;
 			}
 			case 2:
@@ -62,6 +62,7 @@ int multiPlayer()
 				scanf_s("%d", &pTT);
 				nextTok = playerTurn(token, pTT);
 				token = nextTok;
+				++ppt2;
 				break;
 			}
 			if (nextTok == 0)
@@ -79,7 +80,11 @@ int multiPlayer()
 			printf_s("The winner is: %ch\n", plr2Name);
 			++plr2Win;
 		}
-		//vytvoreni souboru ci jeho pripsani
+
 	}
+	FILE* f = NULL;
+	if (f == NULL);
+	fprintf_s(f, "%s: %d (%d)				%s: %d (%d)", plr1Name, plr1Win, ppt, plr2Name, plr2Win, ppt2, "Multi.txt", "a");
+	system("pause");
 	return 0;
 }

@@ -6,7 +6,6 @@
 #include <ctype.h>
 #include <time.h>
 //Score Screen
-int fopen_s(FILE* f, const char fileName, const char* mode);
 void readingFile();
 //single
 int singlePlayer();
