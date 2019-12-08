@@ -24,13 +24,14 @@ int main()
 			//multiplayer
 			printf_s("You choose a multiplayer...\n");
 			multiPlayer();
-			
+			break;
 		}
 		case 3:
 		{
 			//score screen
-			printf_s("...opening a file....");
+			printf_s("...opening a file....\n");
 			readingFile();
+			system("pause");
 			break;
 		}
 		case 4:

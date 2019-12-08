@@ -16,9 +16,13 @@ int playersTurn(int nTok, int take, char namePlayer);
 int multiPlayer();
 
 //both
-int move()
+namespace
 {
-	int randomMove = rand() % 2 + 1;
-	return randomMove;
+	int move()
+	{
+		int randomMove = rand() % 2 + 1;
+		return randomMove;
+	}
 }
+
 

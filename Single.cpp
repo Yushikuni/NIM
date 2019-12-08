@@ -63,7 +63,7 @@ int singlePlayer()
 			case 2:
 			{
 				token = ai_Turn(token);
-				printf_s("AI removes %d: \n", token);
+				//printf_s("AI removes %d: \n", token);
 				++ait;
 				break;
 			}
@@ -85,9 +85,10 @@ int singlePlayer()
 	}
 	
 	//char sent[] = "Player: %d (%d)				AI: %d (%d)", plrWin, ppt, aiWin, ait;
-	FILE* f = NULL;
+	FILE* f = nullptr;
+	fopen_s(&f, "Single.txt", "a");
 
-	fprintf_s(f, "Player: %d (%d)				AI: %d (%d)", plrWin, ppt, aiWin, ait, "Single.txt", "a");
+	fprintf_s(f, "Player: %d (%d)				AI: %d (%d)\n", plrWin, ppt, aiWin, ait, "Single.txt", "a");
 
 	system("pause");
 	return 0;

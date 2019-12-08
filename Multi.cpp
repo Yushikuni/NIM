@@ -37,7 +37,7 @@ int multiPlayer()
 	char plr1Name = NULL;
 	char plr2Name = NULL;
 	printf_s("Player 1 name: ");
-	scanf_s("%ch", &plr1Name);
+	scanf_s("%ch", &plr1Name); //opravit, nefunkèní
 	printf_s("Player 2 name: ");
 	scanf_s("%ch", &plr2Name);
 
@@ -45,6 +45,7 @@ int multiPlayer()
 	{
 		switch (move())
 		{
+			//gliè
 			case 1:
 			{
 				printf_s("How many token would you take?: ");
@@ -72,19 +73,19 @@ int multiPlayer()
 		}
 		if (winnerIs(1))
 		{
-			printf_s("The winner is: %ch\n",plr1Name);
+			printf_s("The winner is: %s\n",plr1Name);
 			++plr1Win;
 		}
 		else
 		{
-			printf_s("The winner is: %ch\n", plr2Name);
+			printf_s("The winner is: %s\n", plr2Name);
 			++plr2Win;
 		}
 
 	}
-	FILE* f = NULL;
-	if (f == NULL);
-	fprintf_s(f, "%s: %d (%d)				%s: %d (%d)", plr1Name, plr1Win, ppt, plr2Name, plr2Win, ppt2, "Multi.txt", "a");
+	FILE* f = nullptr;
+	fopen_s(&f, "Multi.txt", "a");
+	fprintf_s(f, "%s: %d (%d)				%s: %d (%d)\n", plr1Name, plr1Win, ppt, plr2Name, plr2Win, ppt2, "Multi.txt", "a");
 	system("pause");
 	return 0;
 }
