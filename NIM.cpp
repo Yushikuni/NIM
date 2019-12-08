@@ -22,14 +22,15 @@ int main()
 		case 2:
 		{
 			//multiplayer
-			printf_s("You choose a multiplayer");
+			printf_s("You choose a multiplayer...\n");
 			multiPlayer();
 			
 		}
 		case 3:
 		{
 			//score screen
-			printf_s("opening a file");
+			printf_s("...opening a file....");
+			readingFile();
 			break;
 		}
 		case 4:

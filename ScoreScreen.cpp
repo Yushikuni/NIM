@@ -1,30 +1,13 @@
 #include <stdio.h>
 #define MAXCHAR 1000
-int fopen_s(FILE* f, const char fileName, const char* mode); //open the TXT file
+//int fopen_s(FILE* f, const char fileName, const char* mode); //open the TXT file
 void readingFile()
 {
-	//int c;
-	//FILE* file;
-	////file = fopen_s("ScoreScreen.txt", "r");
-	//if (file) {
-	//	while ((c = getc(file)) != EOF)
-	//		putchar(c);
-	//	fclose(file);
-	//}
-	/*
-	#define CHUNK 1024 /* read 1024 bytes at a time 
-	char buf[CHUNK];
-	FILE* file;
-	size_t nread;
-
-	file = fopen("test.txt", "r");
-	if (file) {
-		while ((nread = fread(buf, 1, sizeof buf, file)) > 0)
-			fwrite(buf, 1, nread, stdout);
-		if (ferror(file)) {
-			/* deal with error 
-		}
-		fclose(file);
-	}
-	*/
+	FILE* f = NULL;
+	printf_s("Singleplayer:\n");
+	fscanf_s(f, "Single.txt", "r");
+	fclose(f);
+	printf_s("\n\nMultiplayer:\n");
+	fscanf_s(f, "Multi.txt", "r");
+	fclose(f);
 }

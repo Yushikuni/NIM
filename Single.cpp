@@ -1,7 +1,7 @@
 #include "NIM.h"
 #define player 1
 #define ai 2
-#define sent 500
+
 
 bool theWinnerIs(int whoTurns)
 {
@@ -57,12 +57,14 @@ int singlePlayer()
 				scanf_s("%d", &pTT);
 				nextTok = playerTurn(token, pTT);
 				token = nextTok;
+				++ppt;
 				break;
 			}
 			case 2:
 			{
 				token = ai_Turn(token);
 				printf_s("AI removes %d: \n", token);
+				++ait;
 				break;
 			}
 			if (nextTok == 0)
@@ -81,11 +83,11 @@ int singlePlayer()
 		printf_s("The winner is: AI\n");
 		++aiWin;
 	}
-	//vytvoreni souboru ci jeho pripsani
-	char sent = "Player: %d				AI: %d", plrWin, aiWin;
+	
+	//char sent[] = "Player: %d (%d)				AI: %d (%d)", plrWin, ppt, aiWin, ait;
+	FILE* f = NULL;
 
-
-
+	fprintf_s(f, "Player: %d (%d)				AI: %d (%d)", plrWin, ppt, aiWin, ait, "Single.txt", "a");
 
 	system("pause");
 	return 0;
