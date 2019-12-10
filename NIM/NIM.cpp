@@ -1,14 +1,15 @@
 ﻿// NIM.cpp : Tento soubor obsahuje funkci main. Provádění programu se tam zahajuje a ukončuje.
 //
 
-
+#include <iostream>
+#include <conio.h>
+#include <ctype.h>
 #include "NIM.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
 	int volba = -1;
-	char choose = '0';
 	printf_s("1. SinglePlayer\n2. MultiPlayer\n3. Score Screen\n4. Quick\n");
 	scanf_s("%d", &volba);
 	switch (volba)
@@ -17,22 +18,19 @@ int main()
 		{
 			//singleplayer
 			printf_s("You choose a singleplayer...\n");
-			singlePlayer();						
+			singlePlayer();
 			break;
 		}
 		case 2:
 		{
 			//multiplayer
-			printf_s("You choose a multiplayer...\n");
-			multiPlayer();
-			break;
+			printf_s("You choose a multiplayer");
+			
 		}
 		case 3:
 		{
 			//score screen
-			printf_s("...opening a file....\n");
-			readingFile();
-			system("pause");
+			printf_s("opening a file");
 			break;
 		}
 		case 4:
