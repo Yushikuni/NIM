@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include "NIM.h"
-#define MAXCHAR 1000
 
 void readingFile()
 {
 	FILE* f = nullptr;
 	printf_s("Singleplayer:\n");
 	fopen_s(&f, "Single.txt", "r");
-	if (f==NULL)
+	if (f == NULL)
 	{
-		printf_s("file not found - Single.txt");
-		
+		fprintf_s(stderr, "file not found - Single.txt");
+		return;
 	}
 	else
 	{
@@ -20,7 +19,7 @@ void readingFile()
 			c = getc(f);
 			putchar(c);
 		} while (c != EOF);
-		
+
 	}
 	fclose(f);
 
@@ -28,7 +27,8 @@ void readingFile()
 	fopen_s(&f, "Multi.txt", "r");
 	if (f == NULL)
 	{
-		printf_s("file not found - Multi.txt");
+		fprintf_s(stderr, "file not found - Multi.txt");
+		return;
 	}
 	else
 	{
@@ -37,7 +37,7 @@ void readingFile()
 		{
 			c = getc(f);
 			putchar(c);
-		} while (c!=EOF);
+		} while (c != EOF);
 
 	}
 	fclose(f);

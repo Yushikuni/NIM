@@ -1,0 +1,2 @@
+player A takes: 3 tokens remaining: 2
+player B takes: 2 tokens remaining: 0
