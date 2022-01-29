@@ -9,7 +9,13 @@
 
 ![SinglePlayer](https://user-images.githubusercontent.com/42646031/151655710-3f161a5e-c610-442d-9112-669466290285.png)
 
-### czech description:
+### EN:
+
+NIM with Singleplayer and multiplayer option. After exiting the game score will saved into file
+
+Game is in C/C++ also you can choose between singleplayer and multiplayer. Who takes last token wins a game
+
+### CZ:
 
 Hra má singleplayer kde se hraje proti počítači a multiplayer.
 
